@@ -14,6 +14,9 @@ const GlobalStyles = createGlobalStyle`
         &::-webkit-scrollbar-thumb{
             background: darkgray;
         }
+        &::-webkit-scrollbar-track {
+    background: #fff;
+  }
     }
 
     body{
