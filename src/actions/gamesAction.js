@@ -9,6 +9,10 @@ import {
 //Action creator
 
 export const loadGames = () => async (dispatch) => {
+  dispatch({
+    type: "LOADING_GAMES",
+  });
+
   //FETCH AXIOS
   const popularData = await axios.get(popularGamesURL());
   const upcomingData = await axios.get(upcomingGamesURL());

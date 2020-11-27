@@ -13,7 +13,8 @@ const detailReducer = (state = initState, action) => {
         screen: action.payload.screen,
         isLoading: false,
       };
-    case "LOADING_DETAIL":
+    case "CLEAR_DETAIL":
+      state = initState;
       return { ...state, isLoading: true };
     default:
       return { ...state };
