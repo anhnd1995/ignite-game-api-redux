@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Suspense } from "react";
 import GameDetail from "../components/GameDetail";
 //Redux
 import { useDispatch, useSelector } from "react-redux";
 import { loadGames } from "../actions/gamesAction";
 // Component
-import Game from "../components/Game";
+// import Game from "../components/Game";
 import Loader from "../components/Loader";
 
 import styled from "styled-components";
@@ -12,6 +12,10 @@ import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 
 import { useLocation } from "react-router-dom";
 import { fadeIn } from "../animation";
+
+import LazyLoad from "react-lazyload";
+
+const Game = React.lazy(() => import("../components/Game"));
 
 export default function Home() {
   //get the current location
@@ -38,27 +42,28 @@ export default function Home() {
             <h2>Searched Games</h2>
             <Games>
               {searched.map((game) => (
-                <Game
-                  name={game.name}
-                  released={game.released}
-                  id={game.id}
-                  key={game.id}
-                  image={game.background_image}
-                  data-id={game.id}
-                />
+                <Suspense fallback={<Loader />}>
+                  <Game
+                    name={game.name}
+                    released={game.released}
+                    id={game.id}
+                    key={game.id}
+                    image={game.background_image}
+                    data-id={game.id}
+                  />
+                </Suspense>
               ))}
             </Games>
           </div>
         ) : (
           ""
         )}
-        {isLoading ? (
-          <Loader />
-        ) : (
-          <>
-            <h2>Upcoming Games</h2>
-            <Games>
-              {upcoming.map((game) => (
+
+        <h2>Upcoming Games</h2>
+        <LazyLoad height={200} offset={100} once={true}>
+          <Games>
+            {upcoming.map((game) => (
+              <Suspense fallback={<Loader />}>
                 <Game
                   name={game.name}
                   released={game.released}
@@ -66,11 +71,15 @@ export default function Home() {
                   key={game.id}
                   image={game.background_image}
                 />
-              ))}
-            </Games>
-            <h2>Popular Games</h2>
-            <Games>
-              {popular.map((game) => (
+              </Suspense>
+            ))}
+          </Games>
+        </LazyLoad>
+        <h2>Popular Games</h2>
+        <LazyLoad height={200} offset={100} once={true}>
+          <Games>
+            {popular.map((game) => (
+              <Suspense fallback={<Loader />}>
                 <Game
                   name={game.name}
                   released={game.released}
@@ -78,11 +87,15 @@ export default function Home() {
                   key={game.id}
                   image={game.background_image}
                 />
-              ))}
-            </Games>
-            <h2>New Games</h2>
-            <Games>
-              {newGames.map((game) => (
+              </Suspense>
+            ))}
+          </Games>
+        </LazyLoad>
+        <h2>New Games</h2>
+        <LazyLoad height={200} offset={100} once={true}>
+          <Games>
+            {newGames.map((game) => (
+              <Suspense fallback={<Loader />}>
                 <Game
                   name={game.name}
                   released={game.released}
@@ -90,10 +103,10 @@ export default function Home() {
                   key={game.id}
                   image={game.background_image}
                 />
-              ))}
-            </Games>
-          </>
-        )}
+              </Suspense>
+            ))}
+          </Games>
+        </LazyLoad>
       </AnimateSharedLayout>
     </GameList>
   );
