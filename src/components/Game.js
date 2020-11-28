@@ -70,6 +70,12 @@ const StyledGame = styled(motion.div)`
   cursor: pointer;
   overflow: hidden;
   position: relative;
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+
   img {
     width: 100%;
     height: 40vh;
