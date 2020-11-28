@@ -159,7 +159,7 @@ const Detail = styled(motion.div)`
 
 const Stats = styled(motion.div)`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   .rating img {
     width: 2rem;
@@ -170,13 +170,15 @@ const Stats = styled(motion.div)`
 
 const Info = styled(motion.div)`
   text-align: center;
+  flex-grow: 3;
 `;
 
 const Platforms = styled(motion.div)`
   display: flex;
-  justify-content: space-evenly;
-
+  justify-content: center;
+  flex-wrap: wrap;
   img {
+    flex: 0 1 50px;
     margin-left: 1.5rem;
     height: 50px;
   }

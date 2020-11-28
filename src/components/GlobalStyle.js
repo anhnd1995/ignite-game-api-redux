@@ -15,8 +15,12 @@ const GlobalStyles = createGlobalStyle`
             background: darkgray;
         }
         &::-webkit-scrollbar-track {
-    background: #fff;
-  }
+            background: #fff;
+        }
+
+        @media (max-width: 768px){
+            font-size: 80%;
+        }
     }
 
     body{
