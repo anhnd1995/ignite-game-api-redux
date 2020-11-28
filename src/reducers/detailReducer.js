@@ -1,11 +1,16 @@
 const initState = {
   game: { platforms: [] },
   screen: [],
-  isLoading: true,
+  isLoading: false,
 };
 
 const detailReducer = (state = initState, action) => {
   switch (action.type) {
+    case "LOADING_DETAIL":
+      return {
+        ...state,
+        isLoading: true,
+      };
     case "GET_DETAIL":
       return {
         ...state,
@@ -14,8 +19,8 @@ const detailReducer = (state = initState, action) => {
         isLoading: false,
       };
     case "CLEAR_DETAIL":
-      state = initState;
-      return { ...state, isLoading: true };
+      // state = initState;
+      return { ...state, isLoading: false };
     default:
       return { ...state };
   }

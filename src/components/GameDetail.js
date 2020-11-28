@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 // Import redux
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { smallImage } from "../utils";
 // Image
@@ -19,13 +19,19 @@ import gamepad from "../img/gamepad.svg";
 import starEmpty from "../img/star-empty.png";
 import starFull from "../img/star-full.png";
 
+import { exitDetail } from "../actions/detailAction";
+
 export default function GameDetail({ pathId }) {
   const history = useHistory();
+  const dispatch = useDispatch();
   //Exit Detail
   const exitDetailHandler = (e) => {
     const element = e.target;
     if (element.classList.contains("shadow")) {
+      dispatch(exitDetail());
       document.body.style.overflow = "auto";
+      const game_id = document.getElementById(`${pathId}`);
+      game_id.classList.remove("active");
       history.push("/");
     }
   };

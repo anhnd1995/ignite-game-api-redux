@@ -16,3 +16,9 @@ export const loadDetail = (id) => async (dispatch) => {
     },
   });
 };
+
+export const exitDetail = () => async (dispatch) => {
+  dispatch({
+    type: "CLEAR_DETAIL",
+  });
+};

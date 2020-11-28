@@ -44,6 +44,7 @@ export default function Home() {
                   id={game.id}
                   key={game.id}
                   image={game.background_image}
+                  data-id={game.id}
                 />
               ))}
             </Games>
