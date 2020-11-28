@@ -72,6 +72,10 @@ const StyledGame = styled(motion.div)`
   position: relative;
   transition: 0.3s;
   &:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
     transform: scale(1.1);
     transition: 0.3s;
   }
@@ -141,7 +145,7 @@ const StyledGame = styled(motion.div)`
       left: 11px;
     }
     div:nth-child(9) {
-      animation-delay: -0.8s;
+      animation-delay: -1.1s;
       top: 62px;
       left: 22px;
     }
