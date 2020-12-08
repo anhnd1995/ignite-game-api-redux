@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.js": "/ignite-game-api/static/js/main.8a0e213a.chunk.js",
+    "main.js.map": "/ignite-game-api/static/js/main.8a0e213a.chunk.js.map",
+    "runtime-main.js": "/ignite-game-api/static/js/runtime-main.353314da.js",
+    "runtime-main.js.map": "/ignite-game-api/static/js/runtime-main.353314da.js.map",
+    "static/js/2.46455458.chunk.js": "/ignite-game-api/static/js/2.46455458.chunk.js",
+    "static/js/2.46455458.chunk.js.map": "/ignite-game-api/static/js/2.46455458.chunk.js.map",
+    "static/js/3.c0119006.chunk.js": "/ignite-game-api/static/js/3.c0119006.chunk.js",
+    "static/js/3.c0119006.chunk.js.map": "/ignite-game-api/static/js/3.c0119006.chunk.js.map",
+    "static/js/4.8b49207d.chunk.js": "/ignite-game-api/static/js/4.8b49207d.chunk.js",
+    "static/js/4.8b49207d.chunk.js.map": "/ignite-game-api/static/js/4.8b49207d.chunk.js.map",
+    "index.html": "/ignite-game-api/index.html",
+    "static/js/2.46455458.chunk.js.LICENSE.txt": "/ignite-game-api/static/js/2.46455458.chunk.js.LICENSE.txt",
+    "static/media/PS4.adf94d11.svg": "/ignite-game-api/static/media/PS4.adf94d11.svg",
+    "static/media/PS5.046ff123.svg": "/ignite-game-api/static/media/PS5.046ff123.svg",
+    "static/media/apple.5757c37e.svg": "/ignite-game-api/static/media/apple.5757c37e.svg",
+    "static/media/gamepad.c9269ef5.svg": "/ignite-game-api/static/media/gamepad.c9269ef5.svg",
+    "static/media/logo.9b6b8655.svg": "/ignite-game-api/static/media/logo.9b6b8655.svg",
+    "static/media/nintendo.f579be04.svg": "/ignite-game-api/static/media/nintendo.f579be04.svg",
+    "static/media/steam.d7b8819f.svg": "/ignite-game-api/static/media/steam.d7b8819f.svg",
+    "static/media/xbox-X.40d0cdf0.svg": "/ignite-game-api/static/media/xbox-X.40d0cdf0.svg",
+    "static/media/xbox.3e7db735.svg": "/ignite-game-api/static/media/xbox.3e7db735.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.353314da.js",
+    "static/js/2.46455458.chunk.js",
+    "static/js/main.8a0e213a.chunk.js"
+  ]
+}
